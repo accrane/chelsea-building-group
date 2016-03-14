@@ -1,0 +1,115 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+section.home {
+	background-color: $color-dark-grey;
+	width: 100%;
+	padding: 2%;
+	overflow: hidden;
+	.left {float: left;}
+	.right {float: right;}
+}
+.home-left {
+	width: 100%;
+	@media screen and (min-width: $mobwidth) {
+		width: 48%;
+		float: left;
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+.home-right {
+	width: 100%;
+	@media screen and (min-width: $mobwidth) {
+		width: 48%;
+		float: right;
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+.hero {
+	width: 100%;
+
+	@media screen and (min-width: $mobwidth) {
+
+	}
+}
+.box {
+	padding: 2%;
+	margin-bottom: 8%;
+	@media screen and (min-width: $mobwidth) {
+
+	}
+}
+.box-yellow {
+	background-color: $color-yellow;
+	
+	@media screen and (min-width: $mobwidth) {
+
+	}
+}
+.box-grey {
+	background-color: $color-light-grey;
+	
+	@media screen and (min-width: $mobwidth) {
+
+	}
+}
+
+.box-third {
+	width: 100%;
+	@media screen and (min-width: $mobwidth) {
+		width: 33%;
+	}
+}
+.box-two-third {
+	width: 100%;
+	@media screen and (min-width: $mobwidth) {
+		width: 60%;
+	}
+}
+.box-picture {
+	img {
+		width: 100%;
+	}
+}
+.tall-third {
+	width: 100%;
+	@media screen and (min-width: $mobwidth) {
+		height: 33%;
+	}
+}
+.tall-two-third {
+	width: 100%;
+	padding: 2%;
+	@media screen and (min-width: $mobwidth) {
+		height: 60%;
+	}
+}
