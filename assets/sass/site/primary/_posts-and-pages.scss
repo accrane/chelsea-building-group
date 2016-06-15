@@ -455,7 +455,7 @@ h6 a:hover {
  
  .close {
 	background-color: #E4BF17; 
-	color: #ffffff;
+	color: $color-dark-grey;
  }
  
 .answer {
@@ -466,7 +466,7 @@ h6 a:hover {
 	display:none;
 	font-size: 18px;
 	font-weight: 300;
-	color: #fff;
+	color: $color-dark-grey;
 	@include transition(.3s ease all);
 }
 .grey-wrap-full {
