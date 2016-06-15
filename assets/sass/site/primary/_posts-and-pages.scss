@@ -15,16 +15,55 @@
 .group-blog .byline {
 	display: inline;
 }
-
+.grey-wrapper {
+	width: 100%;
+	background-color: $color-dark-grey;
+	overflow: hidden;
+    padding: 40px 10%;
+}
+.grey-wrapper-title {
+	width: 100%;
+	background-color: $color-dark-grey;
+	overflow: hidden;
+    padding: 10px 10%;
+}
 .page-content,
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
+	color: #fff;
+	font-size: 18px;
+    font-weight: 300;
 }
+.entry-header {
+	color: #fff;
 
+	h1 {
+		text-transform: uppercase;
+	    border-bottom: 1px solid #ffffff;
+	    padding-bottom: 13px;
+	    font-size: 24px;
+	    display: inline-block;
+	    letter-spacing: 1px;
+	    font-weight: normal;
+	}
+}
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+#content-home {
+	width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 40px;
+    float: left;
+    background-color: $color-dark-grey;
+}
+#content {
+	width: 100%;
+	float: left;
+	
 }
 section.home {
 	background-color: $color-dark-grey;
@@ -37,7 +76,7 @@ section.home {
 .home-left {
 	width: 100%;
 	@media screen and (min-width: $mobwidth) {
-		width: 48%;
+		width: 50%;
 		float: left;
 	}
 	@media screen and (min-width: $deskwidth) {
@@ -63,20 +102,46 @@ section.home {
 }
 .box {
 	padding: 2%;
-	margin-bottom: 8%;
+	margin-bottom: 4%;
+
+	h2 {
+		padding-bottom: 10px;
+		border-bottom: 1px solid #ffffff;
+		text-transform: uppercase;
+
+	}
+	p {
+		margin: 0 0 10px 0;
+		font-size: 16px;
+	}
 	@media screen and (min-width: $mobwidth) {
 
 	}
 }
 .box-yellow {
 	background-color: $color-yellow;
-	
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+	position: relative;
 	@media screen and (min-width: $mobwidth) {
 
 	}
 }
 .box-grey {
 	background-color: $color-light-grey;
+	color: $color-dark-grey;
+	position: relative;
+	a {
+		color: $color-dark-grey;
+		text-decoration: none;
+		font-weight: 400;
+
+		&:hover {
+			color: #000;
+		}
+	}
 	
 	@media screen and (min-width: $mobwidth) {
 
@@ -85,31 +150,359 @@ section.home {
 
 .box-third {
 	width: 100%;
-	@media screen and (min-width: $mobwidth) {
-		width: 33%;
+	margin-bottom: 4%;
+	position: relative;
+	@media screen and (min-width: $midwidth) {
+		width: 36%;
+		margin:0;
 	}
 }
 .box-two-third {
 	width: 100%;
-	@media screen and (min-width: $mobwidth) {
+	position: relative;
+	@media screen and (min-width: $midwidth) {
 		width: 60%;
+	}
+	img {
+
 	}
 }
 .box-picture {
+	line-height: 0;
 	img {
 		width: 100%;
+		line-height: 0;
 	}
 }
 .tall-third {
 	width: 100%;
-	@media screen and (min-width: $mobwidth) {
+	position: relative;
+	@media screen and (min-width: $midwidth) {
 		height: 33%;
+		margin-bottom: 17%;
 	}
 }
 .tall-two-third {
 	width: 100%;
 	padding: 2%;
-	@media screen and (min-width: $mobwidth) {
+	position: relative;
+	@media screen and (min-width: $midwidth) {
 		height: 60%;
+		padding: 5% 10%;
+	}
+
+	@media screen and (min-width: $deskwidth) {
+		
+		padding: 15% 10%;
 	}
 }
+.boxlink a {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-indent: -9000px;
+}
+.text-top {
+	color: #ffffff;
+	text-align: center;
+	font-size: 29px;
+	font-family: 'EB Garamond', serif;
+	font-style: italic;
+	letter-spacing: 1px;
+
+	@media screen and (min-width: $mobwidth) {
+		font-size: 16px;
+	}
+	@media screen and (min-width: $midwidth) {
+		font-size: 16px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		font-size: 24px;
+	}
+	@media screen and (min-width: $largewidth) {
+		font-size: 29px;
+	}
+}
+ #home-right-header {
+ 	font-family: 'EB Garamond', serif;
+ 	line-height: 1.2;
+ }
+.text-bottom {
+	color: #ffffff;
+	text-align: center;
+	font-size: 26px;
+	letter-spacing: 3px;
+	font-family: "Oswald", sans-serif;
+	font-weight: 300;
+	@media screen and (min-width: $mobwidth) {
+		font-size: 14px;
+	}
+	@media screen and (min-width: $midwidth) {
+		font-size: 18px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		font-size: 22px;
+	}
+	@media screen and (min-width: $largewidth) {
+		font-size: 26px;
+	}
+}
+
+#content-right-news {
+	float: right;
+	margin-top: 80px;
+	margin-bottom: 30px;
+}
+#archive-box {
+	ul {
+		margin-left: 0px;
+		padding-left: 0px;
+	}
+	li {
+		list-style-type: none;
+	}
+	
+}
+#content-excerpt-box {
+	width: 100%;
+	padding: 5%;
+	float: right;
+	background-color: #CACABE;
+	color: #333333;
+	font-style: italic;
+	font-family: 'EB Garamond', serif;
+	font-size: 21px;
+	margin-top: 20px;
+	line-height: 24px;
+} 
+
+	  
+.news-content-area {
+	width: 63%!important;
+	float: left;
+	margin: 0; 
+}
+h6 a {
+	color: #ffffff;
+	font-size: 17px;
+	border: 1px solid #ffffff;
+	display: inline-block;
+	padding: 10px 20px 10px 20px;
+	text-transform: uppercase;
+}
+  
+h6 a:link {
+	color: #ffffff!important; 
+	text-decoration: none; 
+	@include transition(all ease .3s);
+}
+	
+h6 a:visited {
+	color: #ffffff!important; 
+	text-decoration: none; 
+}
+h6 a:hover {
+	color: #ffffff!important; 
+	text-decoration: none; 
+	background-color: #e4c017; 
+}
+#home-blog-feed {
+
+	h2 {
+		font-size: 1rem;
+		line-height: 1.3rem;
+		@media screen and (min-width: $mobwidth) {
+			font-size: 12px;
+		}
+		@media screen and (min-width: $midwidth) {
+			font-size: 12px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 12px;
+		}
+		@media screen and (min-width: $largewidth) {
+			font-size: 16px;
+		}
+	}
+	p {
+		margin-bottom: 5px;
+		font-weight: 300;
+
+		@media screen and (min-width: $mobwidth) {
+			font-size: 12px;
+		}
+		@media screen and (min-width: $midwidth) {
+			font-size: 12px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 12px;
+		}
+		@media screen and (min-width: $largewidth) {
+			font-size: 14px;
+		}
+	}
+     
+}
+.team-member { 
+	width: 100%;
+	float: left;
+	margin-bottom: 3%; 
+	color: #fff;
+	font-size: 18px;
+    font-weight: 300;
+
+    a {
+	    color: #ffffff;
+    	font-weight: 400;
+    }
+
+	h2, h3 {
+	   clear: none;
+	   text-transform:uppercase;
+   }
+   h2 {
+		margin-top: 10px;
+		margin-bottom: 0px;
+		font-size: 1.3em;
+		font-weight: normal;
+
+
+		a:link { color: #ffffff; }
+		a:hover { color: #e4c017; } 
+   }
+   h3 {   
+		font-family: 'EB Garamond', serif;  
+		font-style: italic;
+		margin-top: 3px;
+		text-transform: none;
+		font-weight: 400;
+   }
+}
+.team-member-photo {
+	width: 100%;
+	margin: 10px 0 20px 0;
+
+	@media screen and (min-width: $mobwidth) {
+		width: 20%;
+		float: left;
+		margin: 0 4% 0 0;
+	}
+
+	img {width: 100%;}
+
+}  
+.neighborhoods-photo {
+	width: 100%;
+	float: left;
+	margin-right: 4%;
+
+	@media screen and (min-width: $mobwidth) {
+		margin: 0 4% 0 0;
+	}
+
+}
+.neighborhoods-content {
+	width: 100%;
+	float: left;
+
+	@media screen and (min-width: $mobwidth) {
+		width: 71%;
+	}
+	a:link { color: #ffffff; text-decoration: none; }
+	a:hover { color: #FDB813; text-decoration: none; } 
+}
+/* =FAQS
+-------------------------------------------------------------- */
+.faqrow {
+	width: 100%;
+	overflow: hidden;
+	margin: 0 0 20px 0;
+	background-color: #CACABE;
+	padding: 0;
+	
+
+}
+.question {
+	width: 100%;
+	float:left;
+	margin: 0;
+	cursor:pointer;	
+	line-height: 1.3;
+	position: relative;
+	padding: 10px 5%;
+	font-weight: 700;
+	font-family: "Oswald", sans-serif;
+	font-size: 17px;
+	color: #333333;
+	@include transition(.3s ease all);
+}
+.question-image {
+	width: 17px;
+	height: 17px;
+	position: absolute;
+	right: 20px;
+	top: 13px;
+	background-image: url(images/panels.png);
+	background-repeat: no-repeat;
+	background-position: -0px -20px;	
+	z-index: 300;
+}
+ .close .question-image {
+	background-position: -0px 0;	
+ }
+ 
+ .close {
+	background-color: #E4BF17; 
+	color: #ffffff;
+ }
+ 
+.answer {
+    width: 100%;
+    padding: 0px 5% 0px 5%;
+	float:left;
+	background-color: #E4BF17;
+	display:none;
+	font-size: 18px;
+	font-weight: 300;
+	color: #fff;
+	@include transition(.3s ease all);
+}
+.grey-wrap-full {
+	width: 100%;
+	background-color: $color-dark-grey;
+	padding: 40px 0 10px 0;
+}
+.client-portal-wrap {
+	width: 100%;
+	background-color: #fff;
+    padding: 10px 0%;
+}
+.client-portal {
+	border-top: 1px solid $color-dark-grey;
+	border-bottom: 1px solid $color-dark-grey;
+	width: 100%;
+	margin: 10px auto;
+	padding: 10px 5%;
+	display: inline-block;
+	input {
+			margin-bottom: 10px;
+		}
+	iframe {
+		width: 230px;
+		height: 90px;
+
+		@media screen and (min-width: $mobwidth) {
+			height: 30px;
+			width: 430px;
+		}
+
+	}
+	body {
+		background-color: $color-dark-grey;
+	}
+}
+input {
+			margin-bottom: 10px;
+		}

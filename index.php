@@ -101,8 +101,8 @@ get_header(); ?>
 
 	        		################################################### -->
 	        		<div class="box box-yellow box-third left js-blocks-homeleft">
-	        			<div class="text-top"><?php echo $box_2_text_top; ?></div>
-	        			<div class="text-bottom"><?php echo $box_2_text_bottom; ?></div>
+	        			<div class="text-bottom"><?php echo $box_2_text_top; ?></div>
+	        			<div class="text-top"><?php echo $box_2_text_bottom; ?></div>
 	        		</div><!-- box -->
 
 	        		
@@ -112,7 +112,8 @@ get_header(); ?>
 
 	        		################################################### -->
 	        		<div class="box box-grey box-two-third right js-blocks-homeleft">
-	        			<?php
+        			    
+        			        <?php
 
 						if( $page_or_post_link ): 
 
@@ -121,7 +122,9 @@ get_header(); ?>
 							setup_postdata( $post ); 
 
 							?>
-						    <h2>
+
+				      
+	        			    <h2>
 						    	<?php if( $box_3_title != '' ) {
 						    		echo $box_3_title;
 						    	} else {
@@ -132,7 +135,12 @@ get_header(); ?>
 						    		echo $box_3_excerpt;
 						    	} else {
 						    		the_excerpt();
-						    	} ?>
+						    	} 
+						    	?>
+
+						    	<div class="boxlink">
+						    		<a href="<?php the_permalink(); ?>">Go</a>
+						    	</div>
 						    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 						<?php else: ?>
 
@@ -166,29 +174,33 @@ get_header(); ?>
 							setup_postdata( $post ); 
 
 							?>
-						    <h2>
-						    	<?php if( $box_3_title != '' ) {
-						    		echo $box_3_title;
+						    <h2 id="home-right-header">
+						    	<?php if( $box_5_title != '' ) {
+						    		echo $box_5_title;
 						    	} else {
 						    		the_title();
 						    	} ?>
 						    </h2>
-						    <?php if( $box_3_excerpt != '' ) {
-						    		echo $box_3_excerpt;
+						   <?php if( $box_5_excerpt != '' ) {
+						    		echo $box_5_excerpt;
 						    	} else {
 						    		the_excerpt();
 						    	} ?>
+
+						    	<div class="boxlink">
+						    		<a href="<?php the_permalink(); ?>">Go</a>
+						    	</div>
 						    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 						<?php 
 						// If no Post is chosen, show the fields.
 						else: ?>
 							<h2>
-						    	<?php if( $box_3_title != '' ) {
-						    		echo $box_3_title;
+						    	<?php if( $box_5_title != '' ) {
+						    		echo $box_5_title;
 						    	} ?>
 						    </h2>
-						    <?php if( $box_3_excerpt != '' ) {
-						    		echo $box_3_excerpt;
+						    <?php if( $box_5_excerpt != '' ) {
+						    		echo $box_5_excerpt;
 						    	} ?>
 						<?php endif; ?>
 	        		</div><!-- box -->
@@ -216,7 +228,7 @@ get_header(); ?>
 								Box 8
 
 	        		################################################### -->
-	        		<div class="box box-grey tall-two-third">
+	        		<div id="home-blog-feed" class="box box-grey tall-two-third">
 	        			<?php
 
 						if( $box_8_page_or_post_link ): 
@@ -227,17 +239,17 @@ get_header(); ?>
 
 							?>
 						    <h2>
-						    	<?php if( $box_3_title != '' ) {
-						    		echo $box_3_title;
+						    	<?php if( $box_8_title != '' ) {
+						    		echo $box_8_title;
 						    	} else {
 						    		the_title();
 						    	} ?>
 						    </h2>
-						    <?php if( $box_3_excerpt != '' ) {
-						    		echo $box_3_excerpt;
+						    <?php if( $box_8_excerpt != '' ) {
+						    		echo $box_8_excerpt;
 						    	} else {
-						    		the_excerpt();
-						    	} ?>
+						    		the_excerpt(20);
+						    	} ?><a href="<?php echo get_permalink(); ?>"> ...read more</a>
 						    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 						<?php else: 
 						// Else pull the latest post
@@ -251,7 +263,8 @@ get_header(); ?>
 
 						?>
 							<h2><?php the_title(); ?></h2>
-							<?php the_excerpt(); ?>
+							<?php the_excerpt(); ?><a href="<?php echo get_permalink(); ?>"> ...read more</a>
+                            
 						<?php endwhile; endif; ?>
 						<?php endif; // end if have post object?>
 	        		</div><!-- box -->

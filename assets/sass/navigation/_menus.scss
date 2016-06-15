@@ -14,13 +14,27 @@
 		margin: 0;
 		padding-left: 0;
 
+		@media screen and (min-width: $midwidth) {
+			display: block;
+		}
+
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			background-color: #fff;
 			float: left;
-			position: absolute;
-			top: 1.5em;
-			left: -999em;
+			width: 100%;
 			z-index: 99999;
+			padding-top: 10px;
+
+			@media screen and (min-width: $midwidth) {
+				position: absolute;
+				top: 35px;
+				left: -999em;
+				width: 220px;
+			}
+
+			@media screen and (min-width: $deskwidth) {
+				top: 50px;
+			}
 
 			ul {
 				left: -999em;
@@ -28,6 +42,18 @@
 			}
 
 			li {
+				font: { size: 13px;}
+
+				
+
+				@media screen and (min-width: $midwidth) {
+					font: { size: 10px;}
+					text-align:  left;
+				}
+
+				@media screen and (min-width: $deskwidth) {
+					font: { size: 16px;}
+				}
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
@@ -35,7 +61,11 @@
 			}
 
 			a {
-				width: 200px;
+				width: 100%;
+
+				@media screen and (min-width: $midwidth) {
+					width: 200px;
+				}
 			}
 
 			:hover > a,
@@ -57,9 +87,20 @@
 		position: relative;
 		text-transform: uppercase;
 		line-height: 3;
-		font: {
-			size: 16px;
+		font: { size: 16px;}
+		width: 100%;
+
+		@media screen and (min-width: $mobwidth) {
 			
+			font: { size: 16px;}
+		}
+		@media screen and (min-width: $midwidth) {
+			font: { size: 12px;}
+			width: auto;
+		}
+
+		@media screen and (min-width: $deskwidth) {
+			font: { size: 16px;}
 		}
 
 		&:hover > a,
@@ -72,6 +113,8 @@
 		padding: 0 20px 0 20px;
 		color: $color-dark-grey;
 		border-bottom: 2px solid #fff;
+		font-weight: 400;
+    	letter-spacing: 1px;
 		@include transition(all .3s ease);
 
 		&:hover {
@@ -93,15 +136,39 @@
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
+
+.menu-toggle {
+	@media screen and (min-width: midwidth) {
 		display: none;
 	}
-	.main-navigation ul {
+}
+.main-navigation ul {
+	@media screen and (min-width: midwidth) {
 		display: block;
 	}
 }
 
+button.menu-toggle {
+	border: 0px;
+	text-shadow: none;
+	background-color: $color-dark-grey;
+	color: #fff;
+	box-shadow: none;
+	width: auto;
+	display: inline-block;
+	margin: 10px auto;
+	border-radius: 0;
+	text-transform: uppercase;
+	font: {
+		
+		weight :300;
+		size: 20px;
+	}
+	
+	@media screen and (min-width: $midwidth) {
+		display: none;
+	}
+}
 .comment-navigation,
 .posts-navigation,
 .post-navigation {

@@ -74,7 +74,23 @@ jQuery(document).ready(function ($) {
 		$("html").niceScroll();
 	});
 	
-	
+	/*
+		FAQ dropdowns
+	__________________________________________
+	*/
+	$('.question').click(function() {
+	 
+	    $(this).next('.answer').slideToggle(500);
+	    $(this).toggleClass('close');
+	 
+	});
+
+	$('.toggle').click(function() {
+	 
+	    $(this).next('ul.mobile-listings').slideToggle(500);
+	    $(this).toggleClass('close');
+	 
+	});
 	/*
 	*
 	*	Equal Heights Divs

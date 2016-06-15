@@ -17,7 +17,17 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-<?php wp_head(); ?>
+<?php 
+
+wp_head(); 
+
+if(is_home()) {
+	$pageid = 'content-home';
+} else {
+	$pageid = 'content';
+}
+
+?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -37,10 +47,12 @@
 	        <?php } ?>
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'acstarter' ); ?></button>
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<?php esc_html_e( 'MENU', 'acstarter' ); ?>
+				</button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- #site-navigation -->
 	
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div id="<?php echo $pageid; ?>" class="site-content">
