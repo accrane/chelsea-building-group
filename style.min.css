@@ -641,10 +641,10 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input
 select{border:1px solid #ccc}
 input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"]{padding:3px}
 textarea{padding-left:3px;width:100%}
-a{color:#0999f3}
+a{color:#e4c017;text-decoration:none}
 a:hover,a:focus,a:active{color:midnightblue}
 a:focus{outline:thin dotted}
-a:hover,a:active{outline:0}
+a:hover,a:active{outline:0;color:#f0f0e1}
 .main-navigation{clear:both;display:block;float:left;width:100%;text-align:center;border-top:1px solid #333;border-bottom:1px solid #333;padding:10px 0 10px 0}
 .main-navigation ul{display:none;list-style:none;margin:0;padding-left:0}
 @media screen and (min-width:900px){.main-navigation ul{display:block}
