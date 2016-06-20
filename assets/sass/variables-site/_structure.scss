@@ -33,6 +33,19 @@ $largewidth: 1300px;
 		/*width: 1200px;*/
 	}
 }
+.content-area-news {
+	width: 100%;
+	margin: 0px auto 20px auto;
+	
+	@media screen and (min-width: $mobwidth) {
+		width: 65%;
+		float: left;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
 #content-right {
 	width: 100%;
 	float: right;
@@ -148,4 +161,22 @@ footer {
 		text-decoration: none;
 	}
 }
+.widget-area {
+	color: $color-light-grey;
 
+	ul {
+		margin: 0 0 30px 0;
+		padding: 0;
+	}
+	li {
+		margin: 0 0 10px 0;
+		padding: 0;
+		list-style: none;
+	}
+	& .widget {
+		h2, h3 {
+			margin: 0 0 15px 0;
+		}
+	}
+	
+}

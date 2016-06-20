@@ -504,5 +504,42 @@ h6 a:hover {
 	}
 }
 input {
-			margin-bottom: 10px;
+	margin-bottom: 10px;
+}
+.news-thumb {
+	float: left;
+
+	&.no-thumb {
+
+	}
+	&.has-thumb {
+		width: 100%;
+		margin: 0 0 10px 0;
+		@media screen and (min-width: $mobwidth) {
+			width: 33%;
+			margin: 0 3% 0 0;
 		}
+	}
+	img {
+		width: 100%;
+	}
+}
+.news-story {
+	color: $color-light-grey;
+	float: left;
+	h2 {
+		margin : 0 0 15px 0;
+	}
+
+	&.no-thumb {
+		width: 100%;
+	}
+	&.has-thumb {
+		width: 100%;
+		margin: 0 0 50px 0;
+		@media screen and (min-width: $mobwidth) {
+			width: 63%;
+		}
+		
+	}
+}

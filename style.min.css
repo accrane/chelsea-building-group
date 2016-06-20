@@ -17,6 +17,9 @@ Tags:
 }.content-area{width:100%;margin:0 auto 20px auto}
 @media screen and (min-width:600px){.content-area{width:50%;float:left;margin:0}
 }@media screen and (min-width:1200px){}
+.content-area-news{width:100%;margin:0 auto 20px auto}
+@media screen and (min-width:600px){.content-area-news{width:65%;float:left;margin:0}
+}@media screen and (min-width:1200px){}
 #content-right{width:100%;float:right}
 @media screen and (min-width:600px){#content-right{width:45%;margin-top:80px;margin-bottom:30px}
 }#content-right img{width:100%;height:auto}
@@ -38,6 +41,10 @@ footer{width:100%;clear:both}
 }.creds{width:auto;text-align:center}
 @media screen and (min-width:600px){.creds{float:right;margin:10px 0 10px 0}
 }.creds a{color:#333;text-decoration:none}
+.widget-area{color:#f0f0e1}
+.widget-area ul{margin:0 0 30px 0;padding:0}
+.widget-area li{margin:0 0 10px 0;padding:0;list-style:none}
+.widget-area .widget h2,.widget-area .widget h3{margin:0 0 15px 0}
 /*!
  * animate.css -http://daneden.me/animate
  * Version - 3.5.0
@@ -610,6 +617,7 @@ td,th{padding:0}
 body,button,input,select,textarea{color:#404040;font-family:sans-serif;font-size:16px;font-size:1rem;line-height:1.5}
 h1,h2,h3,h4,h5,h6{clear:both}
 .entry-content h1{font-size:30px}
+.page-title{color:#f0f0e1}
 p{margin-bottom:1.5em}
 dfn,cite,em,i{font-style:italic}
 blockquote{margin:0 1.5em}
@@ -641,7 +649,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input
 select{border:1px solid #ccc}
 input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"]{padding:3px}
 textarea{padding-left:3px;width:100%}
-a{color:#e4c017;text-decoration:none}
+a{color:#e4c017;text-decoration:none;font-weight:400}
 a:hover,a:focus,a:active{color:midnightblue}
 a:focus{outline:thin dotted}
 a:hover,a:active{outline:0;color:#f0f0e1}
@@ -866,7 +874,16 @@ h6 a:hover{color:#fff !important;text-decoration:none;background-color:#e4c017}
 @media screen and (min-width:600px){.client-portal iframe{height:30px;width:430px}
 }.client-portal body{background-color:#333}
 input{margin-bottom:10px}
-.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
+.news-thumb{float:left}
+.news-thumb.has-thumb{width:100%;margin:0 0 10px 0}
+@media screen and (min-width:600px){.news-thumb.has-thumb{width:33%;margin:0 3% 0 0}
+}.news-thumb img{width:100%}
+.news-story{color:#f0f0e1;float:left}
+.news-story h2{margin:0 0 15px 0}
+.news-story.no-thumb{width:100%}
+.news-story.has-thumb{width:100%;margin:0 0 50px 0}
+@media screen and (min-width:600px){.news-story.has-thumb{width:63%}
+}.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}
