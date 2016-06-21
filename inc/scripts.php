@@ -3,13 +3,23 @@
  * Enqueue scripts and styles.
  */
 function acstarter_scripts() {
-	wp_enqueue_style( 'acstarter-style', get_stylesheet_uri() );
+
+	// Our Style sheet
+	wp_enqueue_style( 'acstarter-style', get_bloginfo('stylesheet_directory') . '/style.css' );
+	wp_enqueue_style( 'acstarter-googlefont', 'https://fonts.googleapis.com/css?family=Oswald:400,300,700' );
 
 	wp_deregister_script('jquery');
-		wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', false, '1.10.2', true);
-		wp_enqueue_script('jquery');
+	wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', false, '1.10.2', true);
+	wp_enqueue_script('jquery');
 
 	
+
+	wp_enqueue_script( 
+			'acstarter-adobe', 
+			'https://use.typekit.net/pju6gqk.js', 
+			array(), '20120206', 
+			false 
+		);
 
 	wp_enqueue_script( 
 			'acstarter-blocks', 

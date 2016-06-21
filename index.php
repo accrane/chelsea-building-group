@@ -111,7 +111,7 @@ get_header(); ?>
 								Box 3
 
 	        		################################################### -->
-	        		<div class="box box-grey box-two-third right js-blocks-homeleft">
+	        		<div class="box box-grey box-two-third right js-blocks-homeleft box-3">
         			    
         			        <?php
 

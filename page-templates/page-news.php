@@ -36,7 +36,9 @@ get_header(); ?>
 					?>
 
 					
-						<div class="news-thumb <?php echo $postClass; ?>"><?php the_post_thumbnail('news-featured', array('class' => 'page-featured')); ?></div>
+						<div class="news-thumb <?php echo $postClass; ?>">
+							<?php the_post_thumbnail('news-featured', array('class' => 'page-featured')); ?>
+						</div><!-- news thumb -->
 
 						<div class="news-story <?php echo $postClass; ?>">
 							<h2>

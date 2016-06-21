@@ -34,38 +34,49 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
     
-	<div id="team-content">
+	<div class="clear"></div>
 
 
-		<?php if(get_field('neighborhood')): ?>      	
-			<?php while(has_sub_field('neighborhood')): ?>
-				<div class="team-member">
+		<?php if(have_rows('neighborhood')): ?>
+			<div id="team-content">    	
+				<?php while(have_rows('neighborhood')): the_row(); 
 
-					<div class="neighborhoods-photo">
-						<?php 
-						$image = get_sub_field('image');
-						if( !empty($image) ): ?>
-							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /> 
-						<?php endif; ?>
-					</div><!-- photo -->
+					$image = get_sub_field('image');
 
-					<div class="neighborhoods-content">
-						<h2><?php the_sub_field("neighborhood_name"); ?></h2>
+					if ( $image != '' ) {
+						$postClass = 'has-thumb';
+					} else {
+						$postClass = 'no-thumb';
+					}
 
-						<p><?php the_sub_field("description"); ?>
+				?>
+					
+					<div class="neighborhood-post">
+						<div class="news-thumb <?php echo $postClass; ?>">
+							<?php if( !empty($image) ): ?>
+								<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /> 
+							<?php endif; ?>
+						</div><!-- news thumb -->
 
-						<?php 
-						$link = get_sub_field('link');
-						if ( $link != "" ) { ?>
-							<h6><a href="<?php echo $link; ?>" target="_blank">VISIT SITE</a></h6>
-						<?php } ?>
-					</div><!-- neightborhood content -->
-				</div> <!-- team member -->
-			 <?php endwhile; ?>
+						<div class="news-story <?php echo $postClass; ?>">
+							<h2><?php the_sub_field("neighborhood_name"); ?></h2>
+
+							<p><?php the_sub_field("description"); ?>
+
+							<?php 
+							$link = get_sub_field('link');
+							if ( $link != "" ) { ?>
+								<h6><a href="<?php echo $link; ?>" target="_blank">VISIT SITE</a></h6>
+							<?php } ?>
+						</div><!-- news story -->
+					</div><!-- neighborhood-post -->
+				
+				 <?php endwhile; ?>
+			 </div><!-- team content -->
 		<?php endif; ?>
 
 
-	</div><!-- team content -->
+	
     
     
 </div><!-- grey wrap -->

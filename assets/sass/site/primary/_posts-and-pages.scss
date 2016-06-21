@@ -1,7 +1,7 @@
 .sticky {
 	display: block;
 }
-
+.clear {clear: both;}
 .hentry {
 	margin: 0 0 1.5em;
 }
@@ -101,21 +101,22 @@ section.home {
 	}
 }
 .box {
-	padding: 2%;
+	padding: 5%;
 	margin-bottom: 4%;
 
 	h2 {
 		padding-bottom: 10px;
 		border-bottom: 1px solid #ffffff;
 		text-transform: uppercase;
-
+		letter-spacing: 2px;
 	}
 	p {
 		margin: 0 0 10px 0;
 		font-size: 16px;
+		font-weight: 300;
 	}
 	@media screen and (min-width: $mobwidth) {
-
+		padding: 2%;
 	}
 }
 .box-yellow {
@@ -123,10 +124,10 @@ section.home {
 	display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0;
+    padding: 5% 0;
 	position: relative;
 	@media screen and (min-width: $mobwidth) {
-
+		padding: 0;
 	}
 }
 .box-grey {
@@ -184,7 +185,7 @@ section.home {
 }
 .tall-two-third {
 	width: 100%;
-	padding: 2%;
+	padding: 5%;
 	position: relative;
 	@media screen and (min-width: $midwidth) {
 		height: 60%;
@@ -208,7 +209,7 @@ section.home {
 	color: #ffffff;
 	text-align: center;
 	font-size: 29px;
-	font-family: 'EB Garamond', serif;
+	font-family: $font-fancy;
 	font-style: italic;
 	letter-spacing: 1px;
 
@@ -226,15 +227,20 @@ section.home {
 	}
 }
  #home-right-header {
- 	font-family: 'EB Garamond', serif;
+ 	font-family: $font-fancy;
  	line-height: 1.2;
+ 	border: 0;
+ 	font-style: italic;
+ 	font-weight: 300;
+ 	text-transform: capitalize;
+ 	letter-spacing: 0;
  }
 .text-bottom {
 	color: #ffffff;
 	text-align: center;
 	font-size: 26px;
 	letter-spacing: 3px;
-	font-family: "Oswald", sans-serif;
+	font-family: $font-body;
 	font-weight: 300;
 	@media screen and (min-width: $mobwidth) {
 		font-size: 14px;
@@ -249,7 +255,37 @@ section.home {
 		font-size: 26px;
 	}
 }
-
+.center {
+	text-align: center;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.contact-col {
+	height: 100%;
+}
+.contactinfo {
+	width: auto;
+	display: inline-block;
+	margin: 0 auto;
+	p {
+		margin: 0 0 20px 0;
+		color: $color-light-grey;
+	}
+	@media screen and (min-width: $mobwidth) {
+		font-size: 18px;
+	}
+	@media screen and (min-width: $midwidth) {
+		font-size: 20px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		font-size: 28px;
+	}
+	@media screen and (min-width: $largewidth) {
+		font-size: 28px;
+	}
+}
 #content-right-news {
 	float: right;
 	margin-top: 80px;
@@ -272,7 +308,7 @@ section.home {
 	background-color: #CACABE;
 	color: #333333;
 	font-style: italic;
-	font-family: 'EB Garamond', serif;
+	font-family: $font-fancy;
 	font-size: 21px;
 	margin-top: 20px;
 	line-height: 24px;
@@ -373,7 +409,7 @@ h6 a:hover {
 		a:hover { color: #e4c017; } 
    }
    h3 {   
-		font-family: 'EB Garamond', serif;  
+		font-family: $font-fancy;  
 		font-style: italic;
 		margin-top: 3px;
 		text-transform: none;
@@ -433,7 +469,7 @@ h6 a:hover {
 	position: relative;
 	padding: 10px 5%;
 	font-weight: 700;
-	font-family: "Oswald", sans-serif;
+	font-family: $font-body;
 	font-size: 17px;
 	color: #333333;
 	@include transition(.3s ease all);
@@ -542,4 +578,10 @@ input {
 		}
 		
 	}
+}
+.neighborhood-post {
+	width: 100%;
+	overflow: hidden;
+	margin: 0 0 50px 0;
+	float: left;
 }
