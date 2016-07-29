@@ -22,15 +22,27 @@ get_header(); ?>
 		</header><!-- .entry-header -->
 	</div><!-- grey wrap title -->
 
-	<div class="client-portal-wrap">
-		<div class="client-portal">
-			<iframe class="login" style="margin: 0 auto; display: block;" src="http://www.buildertrend.net/loginFrametemplate.aspx?builderID=2495"  frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-		</div><!-- client portal -->
-	</div><!-- c p wrap -->
+
+	
+
+
 </div><!-- grey wrap full -->
 
 
 <div class="grey-wrapper">
+
+
+	<div class="client-portal">
+
+	<div style="background: #fff; border: 2px solid #ccc; border-radius: 4px; margin: 0 auto; width: 90%; max-width: 600px;">
+ 	 	<div style="background: #ccc; color: #fff; font-size: 1em; padding: .5em; text-align: center;">CLIENT LOGIN</div>
+ 	 	<iframe class="portal" style="border: 0px none; height: 100px; margin-top: 1em; width: 100%;" src="http://www.buildertrend.net/loginFrametemplate.aspx?" width="600" height="100" frameborder="0"></iframe>
+ 	</div>
+
+	</div><!-- client portal -->
+
+
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 

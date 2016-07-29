@@ -879,11 +879,12 @@ h6 a:hover{color:#fff !important;text-decoration:none;background-color:#e4c017}
 .answer{width:100%;padding:0 5% 0 5%;float:left;background-color:#e4bf17;display:none;font-size:18px;font-weight:300;color:#333;-webkit-transition:.3s ease all;transition:.3s ease all}
 .grey-wrap-full{width:100%;background-color:#333;padding:40px 0 10px 0}
 .client-portal-wrap{width:100%;background-color:#fff;padding:10px 0}
-.client-portal{border-top:1px solid #333;border-bottom:1px solid #333;width:100%;margin:10px auto;padding:10px 5%;display:inline-block}
-.client-portal input{margin-bottom:10px}
-.client-portal iframe{width:230px;height:90px}
-@media screen and (min-width:600px){.client-portal iframe{height:30px;width:430px}
-}.client-portal body{background-color:#333}
+.client-portal{border-top:1px solid #333;border-bottom:1px solid #333;width:100%;margin:10px auto;padding:10px 5%}
+@media screen and (min-width:600px){.client-portal{width:45%;float:right}
+}.client-portal input{margin-bottom:10px}
+.client-portal iframe #button1{margin-top:10px;float:right}
+.client-portal iframe iframe.portal input.nicetextbox{float:right}
+.client-portal body{background-color:#333}
 input{margin-bottom:10px}
 .news-thumb{float:left}
 .news-thumb.has-thumb{width:100%;margin:0 0 10px 0}
