@@ -22,7 +22,14 @@ get_header(); ?>
 		</header><!-- .entry-header -->
 	</div><!-- grey wrap title -->
 
+<div class="client-portal">
 
+	<!-- <div style="background: #fff; border: 2px solid #ccc; border-radius: 4px; margin: 0 auto; width: 90%; max-width: 600px;"> -->
+ 	 	<div style="color: #333; font-size: 1em; padding: .5em; text-align: center;">CLIENT LOGIN</div>
+ 	 	<iframe class="portal" style="border: 0px none; height: 70px; margin-top: 1em; width: 450px;" src="http://www.buildertrend.net/loginFrametemplate.aspx?" width="600" height="100" frameborder="0"></iframe>
+ <!-- 	</div> -->
+
+	</div><!-- client portal -->
 	
 
 
@@ -32,14 +39,7 @@ get_header(); ?>
 <div class="grey-wrapper">
 
 
-	<div class="client-portal">
-
-	<div style="background: #fff; border: 2px solid #ccc; border-radius: 4px; margin: 0 auto; width: 90%; max-width: 600px;">
- 	 	<div style="background: #ccc; color: #fff; font-size: 1em; padding: .5em; text-align: center;">CLIENT LOGIN</div>
- 	 	<iframe class="portal" style="border: 0px none; height: 100px; margin-top: 1em; width: 100%;" src="http://www.buildertrend.net/loginFrametemplate.aspx?" width="600" height="100" frameborder="0"></iframe>
- 	</div>
-
-	</div><!-- client portal -->
+	
 
 
 

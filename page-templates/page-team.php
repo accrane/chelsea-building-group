@@ -48,10 +48,12 @@ get_header(); ?>
 						<?php endif; ?>
 					</div><!-- team member phooto -->
 					
-					<h2><?php the_sub_field("name"); ?></h2>
-					<h3><?php the_sub_field("title"); ?></h3>
+					<div class="team-member-content">
+						<h2><?php the_sub_field("name"); ?></h2>
+						<h3><?php the_sub_field("title"); ?></h3>
 
-					<p><?php the_sub_field("description"); ?></p>
+						<p><?php the_sub_field("description"); ?></p>
+						</div><!-- team memeber content -->
 				 
 						
 				</div> <!-- team member -->

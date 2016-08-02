@@ -23,7 +23,8 @@ jQuery(document).ready(function ($) {
 	*	Target iframe styles
 	*
 	------------------------------------*/
-	
+	console.log("%o",$('iframe.portal'));
+
 	
 	/*
 	*

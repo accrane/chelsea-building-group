@@ -29,6 +29,14 @@ function loginpage_custom_link() {
 add_filter('login_headerurl','loginpage_custom_link');
 
 /*-------------------------------------
+  Move Yoast to the Bottom
+---------------------------------------*/
+function yoasttobottom() {
+  return 'low';
+}
+add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
+
+/*-------------------------------------
 	Favicon.
 ---------------------------------------*/
 function mytheme_favicon() { 

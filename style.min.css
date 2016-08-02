@@ -855,7 +855,7 @@ h6 a:hover{color:#fff !important;text-decoration:none;background-color:#e4c017}
 }@media screen and (min-width:900px){#home-blog-feed p{font-size:12px}
 }@media screen and (min-width:1200px){#home-blog-feed p{font-size:12px}
 }@media screen and (min-width:1300px){#home-blog-feed p{font-size:14px}
-}.team-member{width:100%;float:left;margin-bottom:3%;color:#fff;font-size:18px;font-weight:300}
+}.team-member{width:100%;float:left;margin-bottom:40px;color:#fff;font-size:18px;font-weight:300;border-bottom:1px solid rgba(255,255,255,0.1)}
 .team-member a{color:#fff;font-weight:400}
 .team-member h2,.team-member h3{clear:none;text-transform:uppercase}
 .team-member h2{margin-top:10px;margin-bottom:0;font-size:1.3em;font-weight:normal}
@@ -865,8 +865,8 @@ h6 a:hover{color:#fff !important;text-decoration:none;background-color:#e4c017}
 .team-member-photo{width:100%;margin:10px 0 20px 0}
 @media screen and (min-width:600px){.team-member-photo{width:20%;float:left;margin:0 4% 0 0}
 }.team-member-photo img{width:100%}
-.neighborhoods-photo{width:100%;float:left;margin-right:4%}
-@media screen and (min-width:600px){.neighborhoods-photo{margin:0 4% 0 0}
+.team-member-content{width:100%;float:right}
+@media screen and (min-width:600px){.team-member-content{margin:0;width:70%}
 }.neighborhoods-content{width:100%;float:left}
 @media screen and (min-width:600px){.neighborhoods-content{width:71%}
 }.neighborhoods-content a:link{color:#fff;text-decoration:none}
@@ -877,11 +877,12 @@ h6 a:hover{color:#fff !important;text-decoration:none;background-color:#e4c017}
 .close .question-image{background-position:-0 0}
 .close{background-color:#e4bf17;color:#333}
 .answer{width:100%;padding:0 5% 0 5%;float:left;background-color:#e4bf17;display:none;font-size:18px;font-weight:300;color:#333;-webkit-transition:.3s ease all;transition:.3s ease all}
-.grey-wrap-full{width:100%;background-color:#333;padding:40px 0 10px 0}
-.client-portal-wrap{width:100%;background-color:#fff;padding:10px 0}
-.client-portal{border-top:1px solid #333;border-bottom:1px solid #333;width:100%;margin:10px auto;padding:10px 5%}
-@media screen and (min-width:600px){.client-portal{width:45%;float:right}
+.grey-wrap-full{width:100%;background-color:#333;padding:40px 0 0 0}
+.client-portal-wrap{width:100%;background-color:rgba(255,255,255,0.3);padding:10px 0}
+.client-portal{border-top:1px solid #333;border-bottom:1px solid #333;background-color:rgba(255,255,255,0.3);width:100%;margin:10px auto;padding:10px 5%}
+@media screen and (min-width:600px){.client-portal{float:right}
 }.client-portal input{margin-bottom:10px}
+.client-portal iframe{margin:0 auto;display:inherit}
 .client-portal iframe #button1{margin-top:10px;float:right}
 .client-portal iframe iframe.portal input.nicetextbox{float:right}
 .client-portal body{background-color:#333}
